@@ -10,11 +10,11 @@ set shiftwidth=3
 set tabstop=3
 set nowrap
 set ruler
-set cursorline
+"set cursorline
 set hidden
 set backupdir=$TEMP
 set guifont=lucida_console:h10
-colo darkblack
+colo chuck
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -48,4 +48,4 @@ endfunction
 
 nnoremap j gj
 nnoremap k gk
-nnoremap <CR> <CR>:noh<CR>
+nnoremap <CR> :noh<CR>
