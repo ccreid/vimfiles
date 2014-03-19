@@ -18,8 +18,10 @@ colo chuck
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
+set backspace=indent,eol,start
+set directory=$TEMP
 
-set diffexpr=MyDiff()
+"set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
