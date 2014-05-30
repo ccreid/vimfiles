@@ -20,6 +20,8 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 set backspace=indent,eol,start
 set directory=$TEMP
+set vb
+set t_vb
 
 "set diffexpr=MyDiff()
 function MyDiff()
