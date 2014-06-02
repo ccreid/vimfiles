@@ -52,3 +52,6 @@ endfunction
 nnoremap j gj
 nnoremap k gk
 nnoremap <CR> :noh<CR>
+
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
