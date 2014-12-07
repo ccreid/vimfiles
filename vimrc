@@ -10,7 +10,7 @@ set shiftwidth=3
 set tabstop=3
 set nowrap
 set ruler
-"set cursorline
+set cursorline
 set hidden
 set backupdir=$TEMP
 set guifont=lucida_console:h10
@@ -21,6 +21,9 @@ behave mswin
 set backspace=indent,eol,start
 set directory=$TEMP
 set vb
+set wildmode=list:full
+
+
 
 nnoremap j gj
 nnoremap k gk
