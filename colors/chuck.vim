@@ -45,6 +45,7 @@ hi DiffDelete	ctermfg=lightblue ctermbg=cyan gui=bold guifg=Blue guibg=DarkCyan
 hi DiffText	cterm=bold ctermbg=red gui=bold guibg=Red
 
 hi Cursor	guifg=bg guibg=lightgrey ctermfg=bg ctermbg=lightgrey
+hi CursorLine	guibg=#303000 ctermfg=bg ctermbg=DarkGray
 hi lCursor	guifg=bg guibg=darkgreen ctermfg=bg ctermbg=darkgreen
 
 
