@@ -22,12 +22,15 @@ set backspace=indent,eol,start
 set directory=$TEMP
 set vb
 set wildmode=list:full
+:filetype on
 
 
 
+"key mappings
 nnoremap j gj
 nnoremap k gk
 nnoremap <CR> :noh<CR>
 
+"setup folding for xml files
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
