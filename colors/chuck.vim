@@ -39,15 +39,14 @@ hi Folded	guifg=darkgrey guibg=black	ctermfg=darkgrey ctermbg=black cterm=bold t
 hi FoldColumn	guifg=darkgrey guibg=black	ctermfg=darkgrey ctermbg=black cterm=bold term=bold
 hi LineNr	guifg=green	ctermfg=green cterm=none
 
-hi DiffAdd	guibg=black	ctermbg=black term=none cterm=none
-hi DiffChange	guibg=darkmagenta ctermbg=magenta cterm=none
-hi DiffDelete	ctermfg=lightblue ctermbg=cyan gui=bold guifg=Blue guibg=DarkCyan
-hi DiffText	cterm=bold ctermbg=red gui=bold guibg=Red
-
-hi Cursor	guifg=bg guibg=lightgrey ctermfg=bg ctermbg=lightgrey
+hi Cursor	guifg=bg guibg=LightGray ctermfg=bg ctermbg=LightGray
 hi CursorLine	guibg=#303000 ctermfg=bg ctermbg=DarkGray
 hi lCursor	guifg=bg guibg=darkgreen ctermfg=bg ctermbg=darkgreen
 
+hi DiffAdd	guibg=DarkCyan	ctermbg=DarkCyan term=none cterm=none ctermfg=black guifg=black 
+hi DiffChange	guibg=DarkGray guifg=Black ctermbg=DarkGray ctermfg=Black cterm=none
+hi DiffDelete	ctermfg=lightblue ctermbg=black gui=bold guifg=lightblue guibg=black
+hi DiffText	ctermbg=red guibg=Red ctermfg=black guifg=black
 
 hi Comment	guifg=lightblue ctermfg=lightblue
 hi Constant	ctermfg=magenta guifg=magenta cterm=none
