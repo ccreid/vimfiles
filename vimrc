@@ -27,9 +27,14 @@ set wildmode=list:full
 
 
 "key mappings
+let mapleader = ","
+"when lines wrap, navigate one visual line at a time
 nnoremap j gj
 nnoremap k gk
 nnoremap <CR> :noh<CR>
+"maximize and minimize
+nnoremap <leader>k :simalt ~x<CR><C-W>=
+nnoremap <leader>j :simalt ~r<CR><C-W>=
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
