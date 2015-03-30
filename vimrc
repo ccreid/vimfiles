@@ -25,6 +25,22 @@ set wildmode=list:full
 :filetype on
 
 
+function! FormatTrace()
+   set filetype=xml
+   %s/></>\r</g
+   %s/\\"/"/g
+   %s/\\\//\//g
+   %s/\\u000d\\u000a/\r/g
+"   %s/\({\|}\)/\r\1\r/g
+   call UnescapeXML()
+endfunction
+
+function! UnescapeXML()
+   %s/&lt;/</g
+   %s/&gt;/>/g
+   %s/&quot;/"/g
+   %s/&amp;/\&/g
+endfunction
 
 "key mappings
 let mapleader = ","
@@ -35,6 +51,8 @@ nnoremap <CR> :noh<CR>
 "maximize and minimize
 nnoremap <leader>k :simalt ~x<CR><C-W>=
 nnoremap <leader>j :simalt ~r<CR><C-W>=
+nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
+nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
