@@ -35,6 +35,10 @@ function! FormatTrace()
    call UnescapeXML()
 endfunction
 
+function! FormatJSON()
+   %s/\({\|}\)/\r\1\r/g
+endfunction
+
 function! UnescapeXML()
    %s/&lt;/</g
    %s/&gt;/>/g
@@ -53,6 +57,7 @@ nnoremap <leader>k :simalt ~x<CR><C-W>=
 nnoremap <leader>j :simalt ~r<CR><C-W>=
 nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
+nnoremap <leader>o :call FormatJSON()<CR> :noh<CR>
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
