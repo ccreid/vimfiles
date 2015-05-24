@@ -44,6 +44,7 @@ function! UnescapeXML()
    %s/&gt;/>/g
    %s/&quot;/"/g
    %s/&amp;/\&/g
+   %s/></>\r</g
 endfunction
 
 "key mappings
