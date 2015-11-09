@@ -22,6 +22,7 @@ set backspace=indent,eol,start
 set directory=$TEMP
 set vb
 set wildmode=list:full
+set foldlevelstart=20
 :filetype on
 
 
@@ -36,15 +37,32 @@ function! FormatTrace()
 endfunction
 
 function! FormatJSON()
-   %s/\({\|}\)/\r\1\r/g
+   %s/\n//g
+"newline after opening brace
+   %s/{/{\r/g
+
+"  closing braces get their own line (can't just do new after every
+"  closing curly because closing curlies and commas can share a line)
+   %s/}\(\s*\(,\|}\|\]\)\)\@!/}\r/g
+   %s/}/\r}/g
+
+"   newline after fields 
+   %s/\("\|}\|\]\),/\1,\r/g
+
+"handle array brackets
+   %s/\[/[\r/g
+   %s/\]/\r]/g
+   
+   set filetype=javascript
 endfunction
 
 function! UnescapeXML()
+   %s/\n//g
    %s/&lt;/</g
    %s/&gt;/>/g
    %s/&quot;/"/g
    %s/&amp;/\&/g
-   %s/></>\r</g
+   %s/>\s*</>\r</g
 endfunction
 
 "key mappings
@@ -65,3 +83,5 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 "maxmize window on startup
 "au GUIEnter * simalt ~x
+"
+
