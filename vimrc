@@ -22,6 +22,7 @@ set backspace=indent,eol,start
 set directory=$TEMP
 set vb
 set wildmode=list:full
+set foldlevel=20
 :filetype on
 
 
