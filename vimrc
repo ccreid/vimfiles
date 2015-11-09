@@ -83,5 +83,4 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 "maxmize window on startup
 "au GUIEnter * simalt ~x
-"
 
