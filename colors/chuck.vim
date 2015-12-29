@@ -14,9 +14,9 @@ endif
 let colors_name = "chuck"
 
 hi Normal	guifg=lightgrey guibg=black	ctermfg=lightgray ctermbg=black
-hi ErrorMsg	guifg=white guibg=lightblue	ctermfg=white ctermbg=lightblue
-hi Visual	guifg=lightblue guibg=fg	gui=reverse	ctermfg=lightblue ctermbg=fg cterm=reverse
-hi VisualNOS	guifg=lightblue guibg=fg	gui=reverse,underline	ctermfg=lightblue ctermbg=fg cterm=reverse,underline
+hi ErrorMsg	guifg=red guibg=black	ctermfg=red ctermbg=black
+hi Visual	guifg=black guibg=lightblue	ctermfg=lightblue ctermbg=fg 
+hi VisualNOS	guifg=black guibg=lightblue	gui=underline	ctermfg=black ctermbg=lightblue cterm=underline
 hi Todo		guifg=red guibg=black	ctermfg=red	ctermbg=black
 hi Search	guifg=black guibg=yellow	ctermfg=black ctermbg=yellow cterm=underline term=underline
 hi IncSearch	guifg=black guibg=yellow	ctermfg=black ctermbg=yellow gui=NONE
@@ -24,7 +24,7 @@ hi IncSearch	guifg=black guibg=yellow	ctermfg=black ctermbg=yellow gui=NONE
 hi SpecialKey	guifg=cyan	ctermfg=darkcyan
 hi Directory	guifg=cyan	ctermfg=cyan
 hi Title	guifg=magenta gui=none ctermfg=magenta cterm=bold
-hi WarningMsg	guifg=red	ctermfg=red
+hi WarningMsg	guifg=yellow guibg=black	ctermfg=yellow ctermbg=black
 hi WildMenu	guifg=yellow guibg=black ctermfg=yellow ctermbg=black cterm=none term=none
 hi ModeMsg	guifg=lightblue	ctermfg=lightblue
 hi MoreMsg	ctermfg=darkgreen	ctermfg=darkgreen
