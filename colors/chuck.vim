@@ -22,7 +22,7 @@ hi Search	guifg=black guibg=yellow	ctermfg=black ctermbg=yellow cterm=underline 
 hi IncSearch	guifg=black guibg=yellow	ctermfg=black ctermbg=yellow gui=NONE
 
 hi SpecialKey	guifg=cyan	ctermfg=darkcyan
-hi Directory	guifg=cyan	ctermfg=cyan
+hi Directory	guifg=green	ctermfg=green
 hi Title	guifg=magenta gui=none ctermfg=magenta cterm=bold
 hi WarningMsg	guifg=yellow guibg=black	ctermfg=yellow ctermbg=black
 hi WildMenu	guifg=yellow guibg=black ctermfg=yellow ctermbg=black cterm=none term=none
@@ -31,7 +31,7 @@ hi MoreMsg	ctermfg=darkgreen	ctermfg=darkgreen
 hi Question	guifg=green gui=none ctermfg=green cterm=none
 hi NonText	guifg=lightcyan	ctermfg=lightcyan
 
-hi StatusLine	guifg=lightblue guibg=darkgray gui=none	ctermfg=lightblue ctermbg=gray term=none cterm=none
+hi StatusLine	guifg=blue guibg=lightgray gui=none	ctermfg=green ctermbg=gray term=none cterm=none
 hi StatusLineNC	guifg=black guibg=darkgray gui=none	ctermfg=black ctermbg=gray term=none cterm=none
 hi VertSplit	guifg=black guibg=darkgray gui=none	ctermfg=black ctermbg=gray term=none cterm=none
 
