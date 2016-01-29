@@ -74,6 +74,8 @@ nnoremap <CR> :noh<CR>
 "maximize and minimize
 nnoremap <leader>k :simalt ~x<CR><C-W>=
 nnoremap <leader>j :simalt ~r<CR><C-W>=
+nnoremap <leader>cf :let @+ = expand("%") <CR>
+nnoremap <leader>cp :let @+ = expand("%:p") <CR>
 nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
 nnoremap <leader>o :call FormatJSON()<CR> :noh<CR>
