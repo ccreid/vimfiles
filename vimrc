@@ -23,7 +23,7 @@ set directory=$TEMP
 set vb
 set wildmode=list:full
 set foldlevelstart=20
-:filetype on
+filetype plugin indent on
 
 
 function! FormatTrace()
