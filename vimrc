@@ -23,7 +23,7 @@ set directory=$TEMP
 set vb
 set wildmode=list:full
 set foldlevelstart=20
-:filetype on
+filetype plugin indent on
 
 
 function! FormatTrace()
@@ -71,7 +71,7 @@ let mapleader = ","
 "when lines wrap, navigate one visual line at a time
 nnoremap j gj
 nnoremap k gk
-nnoremap <CR> :noh<CR>
+nnoremap <ESC> :noh<CR><ESC>
 "maximize and minimize
 nnoremap <leader>k :simalt ~x<CR><C-W>=
 nnoremap <leader>j :simalt ~r<CR><C-W>=
