@@ -54,6 +54,7 @@ function! FormatJSON()
    %s/\]/\r]/g
    
    set filetype=javascript
+   set indentexpr&
 endfunction
 
 function! UnescapeXML()
@@ -78,7 +79,7 @@ nnoremap <leader>cf :let @+ = expand("%") <CR>
 nnoremap <leader>cp :let @+ = expand("%:p") <CR>
 nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
-nnoremap <leader>o :call FormatJSON()<CR> :noh<CR>
+nnoremap <leader>o :call FormatJSON()<CR> :noh<CR> 
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
