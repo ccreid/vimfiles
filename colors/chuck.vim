@@ -57,4 +57,5 @@ hi PreProc	ctermfg=magenta guifg=magenta gui=none cterm=none
 hi type		ctermfg=green guifg=green gui=none cterm=none
 hi Underlined	cterm=underline term=underline
 hi Ignore	guifg=bg ctermfg=bg
-
+hi Pmenu guifg=black guibg=lightGray ctermfg=black ctermbg=lightGray
+hi PmenuSel guifg=black guibg=magenta ctermfg=black ctermbg=magenta
