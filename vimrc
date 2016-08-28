@@ -12,14 +12,12 @@ set nowrap
 set ruler
 set cursorline
 set hidden
-set backupdir=$TEMP
-set guifont=lucida_console:h10
 colo chuck
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 set backspace=indent,eol,start
-set directory=$TEMP
+
+
+
 set vb
 set wildmode=list:full
 set foldlevelstart=20
@@ -32,27 +30,27 @@ function! FormatTrace()
    %s/\\"/"/g
    %s/\\\//\//g
    %s/\\u000d\\u000a/\r/g
-"   %s/\({\|}\)/\r\1\r/g
+   "   %s/\({\|}\)/\r\1\r/g
    call UnescapeXML()
 endfunction
 
 function! FormatJSON()
    %s/\n//g
-"newline after opening brace
+   "newline after opening brace
    %s/{/{\r/g
 
-"  closing braces get their own line (can't just do new after every
-"  closing curly because closing curlies and commas can share a line)
+   "  closing braces get their own line (can't just do new after every
+   "  closing curly because closing curlies and commas can share a line)
    %s/}\(\s*\(,\|}\|\]\)\)\@!/}\r/g
    %s/}/\r}/g
 
-"   newline after fields 
+   "   newline after fields 
    %s/\("\|}\|\]\),/\1,\r/g
 
-"handle array brackets
+   "handle array brackets
    %s/\[/[\r/g
    %s/\]/\r]/g
-   
+
    set filetype=javascript
    set indentexpr&
 endfunction
@@ -71,10 +69,8 @@ let mapleader = ","
 "when lines wrap, navigate one visual line at a time
 nnoremap j gj
 nnoremap k gk
-nnoremap <ESC> :noh<CR><ESC>
-"maximize and minimize
-nnoremap <leader>k :simalt ~x<CR><C-W>=
-nnoremap <leader>j :simalt ~r<CR><C-W>=
+nnoremap <silent> <C-l> :noh<CR><C-l>
+nnoremap <leader>, =
 nnoremap <leader>cf :let @+ = expand("%") <CR>
 nnoremap <leader>cp :let @+ = expand("%:p") <CR>
 nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
@@ -86,4 +82,26 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 "maxmize window on startup
 "au GUIEnter * simalt ~x
+
+if has("win32")
+   set directory=$TEMP
+   set backupdir=$TEMP
+   source $VIMRUNTIME/mswin.vim
+   behave mswin
+endif
+
+if has("gui_win32")
+   set guifont=lucida_console:h10
+   "maximize and minimize
+   nnoremap <leader>k :simalt ~x<CR><C-W>=
+   nnoremap <leader>j :simalt ~r<CR><C-W>=
+endif
+
+if has("unix")
+   set directory=~/tmp
+   set backupdir=~/tmp
+   "maximize and minimize
+   nnoremap <leader>k :set lines=999 columns=999<cr>
+   nnoremap <leader>j :set lines=26 columns=80<cr>
+endif
 
