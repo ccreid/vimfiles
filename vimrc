@@ -16,23 +16,10 @@ colo chuck
 source $VIMRUNTIME/vimrc_example.vim
 set backspace=indent,eol,start
 
-
-
 set vb
 set wildmode=list:full
 set foldlevelstart=20
 filetype plugin indent on
-
-
-function! FormatTrace()
-   set filetype=xml
-   %s/></>\r</g
-   %s/\\"/"/g
-   %s/\\\//\//g
-   %s/\\u000d\\u000a/\r/g
-   "   %s/\({\|}\)/\r\1\r/g
-   call UnescapeXML()
-endfunction
 
 function! FormatJSON()
    %s/\n//g
@@ -69,11 +56,10 @@ let mapleader = ","
 "when lines wrap, navigate one visual line at a time
 nnoremap j gj
 nnoremap k gk
-nnoremap <silent> <C-l> :noh<CR><C-l>
+nnoremap <C-l> :noh<CR><C-l>
 nnoremap <leader>, =
 nnoremap <leader>cf :let @+ = expand("%") <CR>
 nnoremap <leader>cp :let @+ = expand("%:p") <CR>
-nnoremap <leader>t :call FormatTrace()<CR> gg =G :noh<CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
 nnoremap <leader>o :call FormatJSON()<CR> :noh<CR> 
 
