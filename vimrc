@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set nocompatible
 set incsearch
 set hlsearch
@@ -20,6 +22,7 @@ set vb
 set wildmode=list:full
 set foldlevelstart=20
 filetype plugin indent on
+syntax on
 
 function! FormatJSON()
    %s/\n//g

@@ -41,7 +41,7 @@ hi LineNr	guifg=green	ctermfg=green cterm=none
 
 hi Cursor	guifg=bg guibg=LightGray ctermfg=bg ctermbg=LightGray
 "hi CursorLine	guibg=#303000 ctermfg=bg ctermbg=DarkGray
-hi CursorLine	cterm=NONE guibg=#303000 ctermbg=235
+hi CursorLine	cterm=NONE guibg=#303000 ctermbg=1
 hi lCursor	guifg=bg guibg=darkgreen ctermfg=bg ctermbg=darkgreen
 
 hi DiffAdd	guibg=DarkCyan	ctermbg=DarkCyan term=none cterm=none ctermfg=black guifg=black 
