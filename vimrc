@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set nocompatible
 set incsearch
 set hlsearch
@@ -20,6 +22,7 @@ set vb
 set wildmode=list:full
 set foldlevelstart=20
 filetype plugin indent on
+syntax on
 
 function! FormatJSON()
    %s/\n//g
@@ -66,6 +69,8 @@ nnoremap <leader>cf :let @+ = expand("%") <CR>
 nnoremap <leader>cp :let @+ = expand("%:p") <CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
 nnoremap <leader>o :call FormatJSON()<CR> :noh<CR> 
+noremap <C-n> :NERDTreeToggle<CR>
+noremap <A-n> :NERDTreeFind<CR>
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
