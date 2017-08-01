@@ -32,14 +32,18 @@ function! FormatJSON()
    %s/}/\r}/g
 
    "   newline after fields 
-   %s/\("\|}\|\]\),/\1,\r/g
+   "%s/\("\|}\|\]\|\(null\)\),/\1,\r/g
+   %s/\("[^"]*":[^,]*,\)/\1\r/g
+
+   "  newline after objects and arrays
+   %s/\(}\|\]\)\s*,/\1,\r/g
 
    "handle array brackets
    %s/\[/[\r/g
    %s/\]/\r]/g
 
-   set filetype=javascript
-   set indentexpr&
+   set filetype=json
+   "set indentexpr&
 endfunction
 
 function! UnescapeXML()
