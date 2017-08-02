@@ -35,14 +35,18 @@ function! FormatJSON()
    %s/}/\r}/g
 
    "   newline after fields 
-   %s/\("\|}\|\]\),/\1,\r/g
+   "%s/\("\|}\|\]\|\(null\)\),/\1,\r/g
+   %s/\("[^"]*":[^,]*,\)/\1\r/g
+
+   "  newline after objects and arrays
+   %s/\(}\|\]\)\s*,/\1,\r/g
 
    "handle array brackets
    %s/\[/[\r/g
    %s/\]/\r]/g
 
-   set filetype=javascript
-   set indentexpr&
+   set filetype=json
+   "set indentexpr&
 endfunction
 
 function! UnescapeXML()
@@ -66,7 +70,6 @@ nnoremap <leader>cp :let @+ = expand("%:p") <CR>
 nnoremap <leader>x :call UnescapeXML() gg =G :noh<CR>
 nnoremap <leader>o :call FormatJSON()<CR> :noh<CR> 
 noremap <C-n> :NERDTreeToggle<CR>
-noremap <A-n> :NERDTreeFind<CR>
 
 "setup folding for xml files
 let g:xml_syntax_folding=1
@@ -79,6 +82,7 @@ if has("win32")
    set backupdir=$TEMP
    source $VIMRUNTIME/mswin.vim
    behave mswin
+   noremap <A-n> :NERDTreeFind<CR>
 endif
 
 if has("gui_win32")
@@ -94,5 +98,6 @@ if has("unix")
    "maximize and minimize
    nnoremap <leader>k :set lines=999 columns=999<cr>
    nnoremap <leader>j :set lines=26 columns=80<cr>
+   noremap ˜ :NERDTreeFind<CR>
 endif
 
