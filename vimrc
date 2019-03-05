@@ -14,7 +14,6 @@ set nowrap
 set ruler
 set cursorline
 set hidden
-set number
 colo chuck
 source $VIMRUNTIME/vimrc_example.vim
 set backspace=indent,eol,start
@@ -22,6 +21,8 @@ set backspace=indent,eol,start
 set vb
 set wildmode=list:full
 set foldlevelstart=20
+set tw=0
+set number
 filetype plugin indent on
 syntax on
 
