@@ -1,4 +1,5 @@
-execute pathogen#infect()
+"source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+"execute pathogen#infect()
 
 set nocompatible
 set incsearch
@@ -63,8 +64,8 @@ endfunction
 "key mappings
 let mapleader = ","
 "when lines wrap, navigate one visual line at a time
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 nnoremap <C-l> :noh<CR><C-l>
 nnoremap <leader>, =
 nnoremap <leader>cf :let @+ = expand("%") <CR>

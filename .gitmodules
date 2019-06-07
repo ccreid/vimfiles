@@ -1,15 +1,18 @@
 [submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+	path = pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "bundle\\nerdtree"]
-	path = bundle/nerdtree
+	path = pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
+	path = pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/textobj_line"]
-	path = bundle/textobj_line
+	path = pack/plugins/start/textobj_line
 	url = https://github.com/kana/vim-textobj-line.git
 [submodule "bundle/textobj_user"]
-	path = bundle/textobj_user
+	path = pack/plugins/start/textobj_user
 	url = https://github.com/kana/vim-textobj-user.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
