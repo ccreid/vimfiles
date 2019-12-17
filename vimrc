@@ -22,7 +22,6 @@ set backspace=indent,eol,start
 set vb
 set wildmode=list:full
 set foldlevelstart=20
-set tw=0
 set number
 filetype plugin indent on
 syntax on
@@ -67,6 +66,7 @@ let mapleader = ","
 "nnoremap j gj
 "nnoremap k gk
 nnoremap <C-l> :noh<CR><C-l>
+nnoremap <leader>l :noh<CR>
 nnoremap <leader>, =
 nnoremap <leader>cf :let @+ = expand("%") <CR>
 nnoremap <leader>cp :let @+ = expand("%:p") <CR>
@@ -104,3 +104,5 @@ if has("unix")
    noremap ˜ :NERDTreeFind<CR>
 endif
 
+set tw=0
+set packpath+=~/.vim/pack/plugins
