@@ -79,6 +79,8 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 "maxmize window on startup
 "au GUIEnter * simalt ~x
+"yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 if has("win32")
    set directory=$TEMP
