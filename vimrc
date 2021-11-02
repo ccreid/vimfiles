@@ -106,5 +106,16 @@ if has("unix")
    noremap ˜ :NERDTreeFind<CR>
 endif
 
+if &diff
+   map gs :call IwhiteToggle()<CR>
+   function! IwhiteToggle()
+      if &diffopt =~ 'iwhite'
+         set diffopt-=iwhite
+      else
+         set diffopt+=iwhite
+      endif
+   endfunction
+endif
+
 set tw=0
 set packpath+=~/.vim/pack/plugins
