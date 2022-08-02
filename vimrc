@@ -1,6 +1,7 @@
 "source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
 "execute pathogen#infect()
 
+set runtimepath+=$HOME/vimfiles
 set nocompatible
 set incsearch
 set hlsearch
@@ -98,8 +99,9 @@ if has("gui_win32")
 endif
 
 if has("unix")
-   set directory=~/tmp
-   set backupdir=~/tmp
+   set directory=~/vimswap
+   set backupdir=~/vimbackup
+   set undodir=~/vimundo
    "maximize and minimize
    nnoremap <leader>k :set lines=999 columns=999<cr>
    nnoremap <leader>j :set lines=26 columns=80<cr>
