@@ -44,10 +44,10 @@ hi Cursor	guifg=bg guibg=LightGray ctermfg=bg ctermbg=LightGray
 hi CursorLine	cterm=NONE guibg=#303000 ctermbg=1
 hi lCursor	guifg=bg guibg=darkgreen ctermfg=bg ctermbg=darkgreen
 
-hi DiffAdd	guibg=DarkCyan	ctermbg=DarkCyan term=none cterm=none ctermfg=black guifg=black 
-hi DiffChange	guibg=DarkGray guifg=Black ctermbg=DarkGray ctermfg=Black cterm=none
+hi DiffAdd	guibg=DarkCyan	ctermbg=DarkCyan term=none cterm=none ctermfg=white guifg=white 
+hi DiffChange	guibg=DarkGray guifg=white ctermbg=DarkGray ctermfg=white cterm=none
 hi DiffDelete	ctermfg=lightblue ctermbg=black gui=bold guifg=lightblue guibg=black
-hi DiffText	ctermbg=red guibg=Red ctermfg=black guifg=black
+hi DiffText	ctermbg=red guibg=Red ctermfg=white guifg=white
 
 hi Comment	guifg=lightblue ctermfg=lightblue
 hi Constant	ctermfg=magenta guifg=magenta cterm=none
